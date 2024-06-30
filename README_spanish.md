@@ -14,8 +14,8 @@ Para usar OAuth2 para SMTP e IMAP de Gmail, sigue estos pasos iniciales:
 
 1. **Cuenta de Google Cloud Platform:** Se requiere una cuenta de Google Cloud Platform.
 2. **Habilitar la API de Gmail:** Ve a la página de [APIs y servicios habilitados](https://console.cloud.google.com/apis/dashboard) y habilita la API de Gmail.
-3. **Crear ID de Cliente OAuth 2.0:** Navega a [Credenciales](https://console.cloud.google.com/apis/credentials), haz clic en "+ Crear Credenciales" y selecciona "ID de Cliente OAuth".
-4. **Configurar la Pantalla de Consentimiento de OAuth:** (Accede clickando al apartado del panel de la izquierda `Pantalla de consentimiento OAuth`). Agrega el alcance 'https://mail.google.com/' para que coincida con los SCOPES utilizados en el código Python. También agrega tu correo electrónico como usuarios de prueba.
+3. **Configurar la Pantalla de Consentimiento de OAuth:** (Accede clickando al apartado del panel de la izquierda `Pantalla de consentimiento OAuth`). Agrega el alcance 'https://mail.google.com/' para que coincida con los SCOPES utilizados en el código Python. También agrega tu correo electrónico como usuarios de prueba.
+4. **Crear ID de Cliente OAuth 2.0:** Navega a [Credenciales](https://console.cloud.google.com/apis/credentials), haz clic en "+ Crear Credenciales" y selecciona "ID de Cliente OAuth".
 5. **Descargar Credenciales:** Descarga el archivo de secreto del cliente y renómbralo a `credentials.json` en el directorio del proyecto.
 
 ## Uso
