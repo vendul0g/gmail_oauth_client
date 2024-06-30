@@ -21,9 +21,54 @@ To use OAuth2 for Gmail SMTP and IMAP, follow these initial setup steps:
 
 ## Usage
 
+### Installing
+I recommend use python environments to manage the package installation to use the project
+
+So install `pipenv` with:
+```
+pip install pipenv
+```
+
+> If the above command does not work, try installing directly with apt:
+> ```
+> sudo apt install pipenv
+> ```
+
+Now install in the project folder the `requirements.txt` with `pipenv`:
+```
+pipenv install
+```
+
+Now launch the environment shell to execute the python script
+```
+pipenv shell
+```
+
+> Note that it will appear the name of the project between `()` in your prompt, that means the environment is correctly working.
+
+### Setup and run
+
+1. Create a folder named `oauth_credentials`
+2. Download the `credentials.json` file from the *Google Cloud Console* and save it into the `oauth_credentials` folder.
+3. Create a file `.env` where you have to initialize the envar `USER_EMAIL` with you own email
+```
+#.env file
+USER_EMAIL="mymail@email.com"
+```
+4. Run the script
+```
+python gmail_oauth_client.py
+```
+
+## Modifying the behavior
+If you read the [code](./gmail_oauth_client.py), easily you will get what is doing and how to modify the behavior of the program. Adapt it to your requirements.
+
+
+## SMTP and IMAP usage
+
 ### SMTP Email Sending
 
-Refer to the SMTP setup part for sending emails using Gmail with OAuth2 authentication.
+Refer to the SMTP setup part for sending emails using Gmail with OAuth2 authentication, in the [python script](./gmail_oauth_client.py).
 
 ### IMAP Email Reading
 

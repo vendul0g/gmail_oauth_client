@@ -18,7 +18,53 @@ Para usar OAuth2 para SMTP e IMAP de Gmail, sigue estos pasos iniciales:
 4. **Crear ID de Cliente OAuth 2.0:** Navega a [Credenciales](https://console.cloud.google.com/apis/credentials), haz clic en "+ Crear Credenciales" y selecciona "ID de Cliente OAuth".
 5. **Descargar Credenciales:** Descarga el archivo de secreto del cliente y renómbralo a `credentials.json` en el directorio del proyecto.
 
+## Usage
+
 ## Uso
+
+### Instalación
+Recomiendo usar entornos de Python para gestionar la instalación de paquetes para usar el proyecto.
+
+Así que instala `pipenv` con:
+```
+pip install pipenv
+```
+
+> si el comando anterior no funciona, intenta instalarlo directamente con apt:
+> ```
+> sudo apt install pipenv
+> ```
+
+Ahora instala en la carpeta del proyecto los paquetes del archivo `requirements.txt` con `pipenv`:
+```
+pipenv install
+```
+
+Ahora lanza el shell del entorno para ejecutar el script de Python:
+```
+pipenv shell
+```
+
+> Nota que aparecerá el nombre del proyecto entre `()` en tu prompt, lo que significa que el entorno está funcionando correctamente.
+
+### Configuración y ejecución
+
+1. Crea una carpeta llamada `oauth_credentials`
+2. Descarga el archivo `credentials.json` desde la *Google Cloud Console* y guárdalo en la carpeta `oauth_credentials`.
+3. Crea un archivo `.env` donde debes inicializar la variable de entorno `USER_EMAIL` con tu propio correo electrónico
+```
+#.env file
+USER_EMAIL="mymail@email.com"
+```
+4. Ejecuta el script
+```
+python gmail_oauth_client.py
+```
+
+## Modificando el comportamiento
+Si lees el [código](./gmail_oauth_client.py), fácilmente entenderás qué está haciendo y cómo modificar el comportamiento del programa. Adáptalo a tus necesidades.
+
+## Usando IMAP y SMTP 
 
 ### Envío de Correos Electrónicos SMTP
 
