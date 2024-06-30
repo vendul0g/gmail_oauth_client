@@ -10,6 +10,7 @@ google-auth-httplib2 = "*"
 google-api-python-client = "*"
 imap-tools = "*"
 pyioga = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
